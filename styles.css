@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 80%;
+    background-color: #f4f4f4;
+    padding: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+}
+
+.filters div {
+    margin-bottom: 10px; /* Adds space between each filter */
+}
+
+.filters label, .filters select {
+    margin-bottom: 10px;
+}
+
+main {
+    width: 95%;
+    max-width: 1200px;
+    overflow-x: auto; /* Allow horizontal scrolling for tables on smaller screens */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em; /* Reduce font size slightly for smaller screens */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    min-width: 80px; /* Minimum width for table cells */
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px; /* Adds a subtle rounded corner to images */
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em; /* Smaller font size for mobile screens */
+    }
+
+    .filters {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    table {
+        font-size: 0.8em; /* Further reduce font size for smaller screens */
+    }
+
+    th, td {
+        padding: 5px; /* Smaller padding to fit data better on smaller screens */
+    }
+
+    img {
+        width: 40px;
+        height: 40px;
+    }
+}
+

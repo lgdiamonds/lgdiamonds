@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Sorting and Filtering</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Diamond Inventory</h1>
+        <div class="filters">
+            <div>
+                <label for="shape-filter">Shape:</label>
+                <select id="shape-filter">
+                    <option value="All">All</option>
+                    <option value="Round">Round</option>
+                    <option value="Princess">Princess</option>
+                    <option value="Cushion">Cushion</option>
+                    <option value="Emerald">Emerald</option>
+                    <option value="Oval">Oval</option>
+                    <option value="Radiant">Radiant</option>
+                    <option value="Asscher">Asscher</option>
+                    <option value="Marquise">Marquise</option>
+                    <option value="Heart">Heart</option>
+                    <option value="Pear">Pear</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="cut-filter">Cut:</label>
+                <select id="cut-filter">
+                    <option value="All">All</option>
+                    <option value="Ideal">Ideal</option>
+                    <option value="Excellent">Excellent</option>
+                    <option value="Very Good">Very Good</option>
+                    <option value="Good">Good</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="clarity-filter">Clarity:</label>
+                <select id="clarity-filter">
+                    <option value="All">All</option>
+                    <option value="FL">FL</option>
+                    <option value="IF">IF</option>
+                    <option value="VVS1">VVS1</option>
+                    <option value="VVS2">VVS2</option>
+                    <option value="VS1">VS1</option>
+                    <option value="VS2">VS2</option>
+                    <option value="SI1">SI1</option>
+                    <option value="SI2">SI2</option>
+                    <option value="I1">I1</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="carat-min">Carat Min:</label>
+                <input type="number" id="carat-min" value="0" step="0.1" min="0">
+                <label for="carat-max">Carat Max:</label>
+                <input type="number" id="carat-max" value="10" step="0.1" min="0">
+            </div>
+
+            <div>
+                <label for="sort-by">Sort By:</label>
+                <select id="sort-by">
+                    <option value="carat-high">Carats: High to Low</option>
+                    <option value="carat-low">Carats: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="price-low">Price: Low to High</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Photo</th>
+                    <th>Shape</th>
+                    <th>Carat</th>
+                    <th>Color</th>
+                    <th>Cut</th>
+                    <th>Clarity</th>
+                    <th>Fluorescence</th>
+                    <th>Price</th>
+                    <th>Discount</th>
+                    <th>Certificate</th>
+                </tr>
+            </thead>
+            <tbody id="diamond-table">
+                <!-- Rows will be populated dynamically -->
+            </tbody>
+        </table>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
